@@ -9,6 +9,7 @@
 #include "Utils.hpp"
 
 #include <inttypes.h>
+#include <string.h> // for memset
 #include <strings.h>
 
 #include <iostream>

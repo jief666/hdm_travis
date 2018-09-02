@@ -19,7 +19,7 @@
 // So far, it's true for Apple 64 bits, linux 32 bits (with _FILE_OFFSET_BITS=64).
 #include <stdio.h>
 #include <sys/types.h>
-typedef unsigned long long int uoff_t;
+typedef int64_t uoff_t;
 #if defined(__cpp_static_assert)
 	static_assert(sizeof(off_t) == sizeof(uoff_t), "sizeof(off_t) == sizeof(uoff_t)");
 #else
