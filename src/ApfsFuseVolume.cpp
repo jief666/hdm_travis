@@ -404,7 +404,7 @@ int ApfsFuseVolume::readdir(const char* path, void* buf, fuse_fill_dir_t filler,
 #if defined(__APPLE__) && !defined(DARLING)
 int ApfsFuseVolume::getxattr(const char* path, const char* name, char* value, size_t size, uint32_t position)
 #else
-int ApfsFuseVolume::getxattr(const char* path, const char* name, char* value, size_t vlen)
+int ApfsFuseVolume::getxattr(const char* path, const char* name, char* value, size_t size)
 #endif
 {
 	trace_fuse_op(path, "apfs_getxattr(%s, %s, % " PRIdPTR " , %zd)\n", path, name, (intptr_t)value, size);
