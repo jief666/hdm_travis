@@ -14,4 +14,8 @@ install:
   - export PATH=../.settings/jief_build_scripts:$PATH
   - cd jief666/hdm_travis/buildTravis
 script:
+  - pwd
+  - ls 
+  - ls / 
+  - ls /home/travis/build 
   - make all
