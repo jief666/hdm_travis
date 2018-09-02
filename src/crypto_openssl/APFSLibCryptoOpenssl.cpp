@@ -9,12 +9,13 @@
 #include <string.h> // for memcpy
 
 #include "../../apfs-fuse/ApfsLib/APFSLibCrypto.h"
+extern "C" {
 #include <openssl/sha.h>
 #include <openssl/aes.h>
 #include <openssl/hmac.h>
 #include <openssl/evp.h>
 #include <openssl/modes.h>
-
+}
 #include "crc32c.h"
 
 
