@@ -34,12 +34,15 @@ cmdArgs=( "$bin_path" $("$ps_dir"/"$prefix"-ldflags) "$@" )
 echo "${cmdArgs[@]}"
 
 "${cmdArgs[@]}"
+rv=$?
 
 #fix for stdc++
-if [ $? -eq 0 ]
+if [ $rv -eq 0 ]
 then
 	cmdArgs=()
 	cmdArgs=( install_name_tool -change libstdc++.6.dylib "$gcc_path"/lib/libstdc++.6.dylib "$exe" )
 	echo "${cmdArgs[@]}"
 	"${cmdArgs[@]}"
+else
+    exit $rv
 fi

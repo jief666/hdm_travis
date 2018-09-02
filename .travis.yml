@@ -12,6 +12,8 @@ addons:
 #      - g++-6
        - libfuse-dev
        - libattr1-dev
+       - openssl
+       - openssl-dev
 install:
   - export PATH=../.settings/jief_build_scripts:$PATH
 before_script: cd buildTravis
