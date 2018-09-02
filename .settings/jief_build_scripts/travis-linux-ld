@@ -35,7 +35,7 @@ source "$SCRIPT_DIR"/"$prefix"-path "g++" #we use g++ as a linker, so let's igno
 ps_dir="$SCRIPT_DIR"/../jief_build_scripts_project_specific
 
 cmdArgs=()
-cmdArgs=( "$bin_path" $("$ps_dir"/"$prefix"-ldflags) "$@" )
+cmdArgs=( "$bin_path" $("$ps_dir"/"$prefix"-ldflags) "$@" $("$ps_dir"/"$prefix"-ldflags) )
 
 echo "${cmdArgs[@]}"
 
