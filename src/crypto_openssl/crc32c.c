@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: head/sys/libkern/crc32.c 233517 2012-03-26 18:22:04Z marius $");
+//__FBSDID("$FreeBSD: head/sys/libkern/crc32.c 233517 2012-03-26 18:22:04Z marius $");
 
 #include "crc32c.h"
 
