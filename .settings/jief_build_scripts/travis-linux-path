@@ -3,5 +3,5 @@
 gcc_which=`which $1`
 gcc_path=`dirname $gcc_which`
 gcc_prefix=
-gcc_suffix=
-bin_path="$gcc_which"
+gcc_suffix=-6
+bin_path="$gcc_which""$gcc_suffix"
