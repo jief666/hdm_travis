@@ -49,14 +49,12 @@ hdm_travis: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross G++ Linker'
 	travis-linux-ld  -o "hdm_travis" $(OBJS) $(USER_OBJS) $(LIBS)
-	@echo 'Finished building target: $@'
-	@echo ' '
+	echo $(.SHELLSTATUS)
 
 # Other Targets
 clean:
 	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(C_DEPS)$(CPP_DEPS) hdm_travis
 	-@echo ' '
 
-.PHONY: all clean dependents
 
 -include ../makefile.targets
