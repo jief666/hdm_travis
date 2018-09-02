@@ -9,4 +9,4 @@ SCRIPT_DIR=`pwd` # Save script dir
 cd "${OLD_INITIAL_DIR}" # Go back to initial directory 
 
 echo -L../../../lib_osx/icu4c/62.1/lib \
-     -lfuse -lz -lssl -lcrypto -lbz2 -lxml2 -llzma -licuuc -licudata
+     -lfusea -lz -lssl -lcrypto -lbz2 -lxml2 -llzma -licuuc -licudata
