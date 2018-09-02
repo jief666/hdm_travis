@@ -4,8 +4,9 @@
 #include "../darling-dmg/src/Reader.h"
 
 #include <string.h>
-
 #include <errno.h>
+#include <attr/xattr.h> // for ENOATTR
+
 #include <iostream>
 #include <functional>
 
