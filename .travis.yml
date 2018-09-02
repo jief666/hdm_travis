@@ -6,10 +6,10 @@ compiler:
 addons:
   apt:
     sources:
-#      - ubuntu-toolchain-r-test
+       - ubuntu-toolchain-r-test
 #      - llvm-toolchain-precise-3.8
     packages:
-#      - g++-6
+       - g++-6
        - libfuse-dev
        - libattr1-dev
        - openssl
@@ -19,9 +19,7 @@ install:
 before_script: cd buildTravis
 script:
   - pwd
-  - ls 
-  - ls / 
-  - ls /home/travis/build 
+  - gcc -v
+  - which g++-6 
   - make all
-
   
