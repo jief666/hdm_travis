@@ -6,12 +6,12 @@ compiler:
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
-      - llvm-toolchain-precise-3.8
+#      - ubuntu-toolchain-r-test
+#      - llvm-toolchain-precise-3.8
     packages:
-      - g++-6
+#      - g++-6
 install:
   - export PATH=../.settings/jief_build_scripts:$PATH
-  - cd hdm_travis/buildTravis
+  - cd jief666/hdm_travis/buildTravis
 script:
   - make all
