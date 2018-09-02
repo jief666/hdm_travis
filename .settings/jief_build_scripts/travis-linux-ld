@@ -39,16 +39,5 @@ cmdArgs=( "$bin_path" $("$ps_dir"/"$prefix"-ldflags) "$@" $("$ps_dir"/"$prefix"-
 
 echo "${cmdArgs[@]}"
 
-"${cmdArgs[@]}"
-rv=$?
-
-#fix for stdc++
-if [ $rv -eq 0 ]
-then
-	cmdArgs=()
-	cmdArgs=( install_name_tool -change libstdc++.6.dylib "$gcc_path"/lib/libstdc++.6.dylib "$exe" )
-	echo "${cmdArgs[@]}"
-	"${cmdArgs[@]}"
-else
-    exit $rv
-fi
+#if cmd is executed without exec, you have to get the exit code and exit the shell with it.
+exec "${cmdArgs[@]}"
