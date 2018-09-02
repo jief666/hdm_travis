@@ -8,6 +8,7 @@
 
 #include "Utils.hpp"
 
+#include <stdarg.h>
 #include <string>
 #include <iostream>
 

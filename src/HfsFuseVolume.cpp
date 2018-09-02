@@ -151,7 +151,7 @@ int HfsFuseVolume::readdir(const char* path, void* buf, fuse_fill_dir_t filler, 
 #if defined(__APPLE__) && !defined(DARLING)
 int HfsFuseVolume::getxattr(const char* path, const char* name, char* value, size_t vlen, uint32_t position)
 #else
-int DarlingFuseVolume::getxattr(const char* path, const char* name, char* value, size_t vlen)
+int HfsFuseVolume::getxattr(const char* path, const char* name, char* value, size_t vlen)
 #endif
 {
 	#ifdef __APPLE__
