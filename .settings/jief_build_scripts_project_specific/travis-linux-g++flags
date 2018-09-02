@@ -1,5 +1,11 @@
 #!/bin/bash
-SCRIPT_ABS_FILENAME=`LC_ALL=en_US.ISO8859-1 perl -e 'use Cwd "abs_path";print abs_path(shift)' "${BASH_SOURCE[0]}"`
-SCRIPT_DIR=`dirname "$SCRIPT_ABS_FILENAME"`
+#SCRIPT_ABS_FILENAME=`LC_ALL=en_US.ISO8859-1 perl -e 'use Cwd "abs_path";print abs_path(shift)' "${BASH_SOURCE[0]}"`
+#SCRIPT_DIR=`dirname "$SCRIPT_ABS_FILENAME"`
+
+OLD_INITIAL_DIR=`pwd` # Save current dir
+OLD_SCRIPT_DIR_TMP=`dirname "$0"`
+cd "${OLD_SCRIPT_DIR_TMP}" # Go to script dir
+SCRIPT_DIR=`pwd` # Save script dir
+cd "${OLD_INITIAL_DIR}" # Go back to initial directory 
 
 echo -std=c++11
