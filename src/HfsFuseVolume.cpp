@@ -5,7 +5,9 @@
 
 #include <string.h>
 #include <errno.h>
+#ifndef __APPLE__
 #include <attr/xattr.h> // for ENOATTR
+#endif
 
 #include <iostream>
 #include <functional>
