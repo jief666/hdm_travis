@@ -12,7 +12,7 @@ addons:
 #      - g++-6
 install:
   - export PATH=../.settings/jief_build_scripts:$PATH
-#before_script: cd hdm_travis
+before_script: cd buildTravis
 script:
   - pwd
   - ls 
