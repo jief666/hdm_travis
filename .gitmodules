@@ -1,0 +1,6 @@
+[submodule "apfs-fuse"]
+	path = apfs-fuse
+	url = https://github.com/jief666/apfs-fuse.git
+[submodule "darling-dmg"]
+	path = darling-dmg
+	url = https://github.com/jief666/darling-dmg.git

@@ -41,7 +41,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="cdt.managedbuild.targetPlatform.gnu.cross.523546607" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.995715639" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.995715639" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool command="gcc" id="cdt.managedbuild.tool.gnu.cross.c.compiler.1506642277" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -111,6 +111,10 @@
                     					
                     <sourceEntries>
                         						
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        						
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        						
                         <entry excluding="crypto++|crypto|crypto/gladman-aes-modes.dis|crypto/gladman-aes.dis|crypto/hmac-sha1 OLD|crypto/gladman-sha/shasum.c|crypto/gladman-sha/hmac_test.c|crypto/gladman-sha/sha-512-t.c|crypto/gladman-sha/sha_time.c|crypto/gladman-sha/sha_test.c|crypto/gladman-sha/pwd2key.c|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
@@ -161,7 +165,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1475660134" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugArm" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1897878707" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugArm" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1897878707" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.826372983" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -225,6 +229,10 @@
                     					
                     <sourceEntries>
                         						
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        						
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        						
                         <entry excluding="crypto/gladman-aes-modes.dis|crypto/gladman-aes.dis|crypto/hmac-sha1 OLD|crypto/gladman-sha/shasum.c|crypto/gladman-sha/hmac_test.c|crypto/gladman-sha/sha-512-t.c|crypto/gladman-sha/sha_time.c|crypto/gladman-sha/sha_test.c|crypto/gladman-sha/pwd2key.c|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
@@ -275,7 +283,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="cdt.managedbuild.targetPlatform.gnu.cross.304930662" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1962114009" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1962114009" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool command="gcc" id="cdt.managedbuild.tool.gnu.cross.c.compiler.662718984" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -347,6 +355,10 @@
                     					
                     <sourceEntries>
                         						
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        						
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        						
                         <entry excluding="crypto/gladman-aes-modes.dis|crypto/gladman-aes.dis|crypto/hmac-sha1 OLD|crypto/gladman-sha/shasum.c|crypto/gladman-sha/hmac_test.c|crypto/gladman-sha/sha-512-t.c|crypto/gladman-sha/sha_time.c|crypto/gladman-sha/sha_test.c|crypto/gladman-sha/pwd2key.c|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
@@ -397,7 +409,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1658952947" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugArm" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.810219052" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugArm" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.810219052" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1999510142" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -459,6 +471,10 @@
                     					
                     <sourceEntries>
                         						
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        						
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        						
                         <entry excluding="crypto/gladman-aes-modes.dis|crypto/gladman-aes.dis|crypto/hmac-sha1 OLD|crypto/gladman-sha/shasum.c|crypto/gladman-sha/hmac_test.c|crypto/gladman-sha/sha-512-t.c|crypto/gladman-sha/sha_time.c|crypto/gladman-sha/sha_test.c|crypto/gladman-sha/pwd2key.c|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
@@ -509,7 +525,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="cdt.managedbuild.targetPlatform.gnu.cross.216708454" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.642800797" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.642800797" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool command="gcc" id="cdt.managedbuild.tool.gnu.cross.c.compiler.1766942553" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -579,6 +595,10 @@
                     					
                     <sourceEntries>
                         						
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        						
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        						
                         <entry excluding="crypto++|crypto|crypto/gladman-aes-modes.dis|crypto/gladman-aes.dis|crypto/hmac-sha1 OLD|crypto/gladman-sha/shasum.c|crypto/gladman-sha/hmac_test.c|crypto/gladman-sha/sha-512-t.c|crypto/gladman-sha/sha_time.c|crypto/gladman-sha/sha_test.c|crypto/gladman-sha/pwd2key.c|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
@@ -629,7 +649,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="cdt.managedbuild.targetPlatform.gnu.cross.117425782" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.763033382" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.763033382" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool command="gcc" id="cdt.managedbuild.tool.gnu.cross.c.compiler.102594589" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -699,6 +719,10 @@
                     					
                     <sourceEntries>
                         						
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        						
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        						
                         <entry excluding="crypto/gladman-aes-modes.dis|crypto/gladman-aes.dis|crypto/hmac-sha1 OLD|crypto/gladman-sha/shasum.c|crypto/gladman-sha/hmac_test.c|crypto/gladman-sha/sha-512-t.c|crypto/gladman-sha/sha_time.c|crypto/gladman-sha/sha_test.c|crypto/gladman-sha/pwd2key.c|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
@@ -749,7 +773,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="cdt.managedbuild.targetPlatform.gnu.cross.210841144" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1731839511" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1731839511" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool command="gcc" id="cdt.managedbuild.tool.gnu.cross.c.compiler.2117521118" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -819,6 +843,10 @@
                     					
                     <sourceEntries>
                         						
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        						
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        						
                         <entry excluding="crypto++|crypto_openssl|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
                     </sourceEntries>
@@ -869,7 +897,7 @@
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.MachO64" id="cdt.managedbuild.targetPlatform.gnu.cross.161874021" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
-                            <builder buildPath="${workspace_loc:/hdm_travis}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1063405574" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+                            <builder buildPath="${workspace_loc:/hdimount--jief666--wip--travis_test}/DebugOsx" enableCleanBuild="false" id="cdt.managedbuild.builder.gnu.cross.1063405574" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
                             							
                             <tool command="gcc" id="cdt.managedbuild.tool.gnu.cross.c.compiler.2101108127" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
                                 								
@@ -939,9 +967,9 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="3rdparty/lzfse/src/lzfse_main.c|apfsfuse|ApfsDumpQuick|ApfsDump" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
+                        <entry excluding="apfsfuse|ApfsDumpQuick|ApfsDump|3rdparty/lzfse/tests|3rdparty/lzfse/src/lzfse_main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="apfs-fuse"/>
                         						
-                        <entry excluding="src/main-hdiutil.cpp|src/main-fuse.cpp|test" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
+                        <entry excluding="src/CryptoOpenssl.cpp|src/main-hdiutil.cpp|test|src/main-fuse.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="darling-dmg"/>
                         						
                         <entry excluding="crypto++|crypto|crypto/gladman-aes-modes.dis|crypto/gladman-aes.dis|crypto/hmac-sha1 OLD|crypto/gladman-sha/shasum.c|crypto/gladman-sha/hmac_test.c|crypto/gladman-sha/sha-512-t.c|crypto/gladman-sha/sha_time.c|crypto/gladman-sha/sha_test.c|crypto/gladman-sha/pwd2key.c|sparsefs/sparsebundlefs.cpp|main-hdiutil.cpp" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="src"/>
                         					
@@ -959,7 +987,7 @@
     	
     <storageModule moduleId="cdtBuildSystem" version="4.0.0">
         		
-        <project id="hdm_travis.cdt.managedbuild.target.macosx.exe.906270174" name="Executable" projectType="cdt.managedbuild.target.macosx.exe"/>
+        <project id="hdimount--jief666--wip--travis_test.cdt.managedbuild.target.macosx.exe.906270174" name="Executable" projectType="cdt.managedbuild.target.macosx.exe"/>
         	
     </storageModule>
     	
@@ -971,7 +999,7 @@
         		
         <configuration configurationName="DebugOsx">
             			
-            <resource resourceType="FOLDER" workspacePath="/hdm_travis/DebugOsx"/>
+            <resource resourceType="FOLDER" workspacePath="/hdimount--jief666--wip--travis_test/DebugOsx"/>
             		
         </configuration>
         		
@@ -981,7 +1009,7 @@
         		
         <configuration configurationName="DebugArm">
             			
-            <resource resourceType="FOLDER" workspacePath="/hdm_travis/DebugArm"/>
+            <resource resourceType="FOLDER" workspacePath="/hdimount--jief666--wip--travis_test/DebugArm"/>
             		
         </configuration>
         		
@@ -991,13 +1019,13 @@
         		
         <configuration configurationName="Debug">
             			
-            <resource resourceType="PROJECT" workspacePath="/hdm_travis"/>
+            <resource resourceType="PROJECT" workspacePath="/hdimount--jief666--wip--travis_test"/>
             		
         </configuration>
         		
         <configuration configurationName="build_DebugOsx-clang">
             			
-            <resource resourceType="PROJECT" workspacePath="/hdm_travis"/>
+            <resource resourceType="PROJECT" workspacePath="/hdimount--jief666--wip--travis_test"/>
             		
         </configuration>
         	
@@ -1007,7 +1035,13 @@
         		
         <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
         		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1355093079;cdt.managedbuild.tool.gnu.c.compiler.input.828831829">
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.;cdt.managedbuild.tool.gnu.cross.c.compiler.1506642277;cdt.managedbuild.tool.gnu.c.compiler.input.1082146874">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.;cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.985209703;cdt.managedbuild.tool.gnu.cpp.compiler.input.426053367">
             			
             <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
             		
@@ -1025,31 +1059,13 @@
             		
         </scannerConfigBuildInfo>
         		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.11946682;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.11946682.;cdt.managedbuild.tool.gnu.cross.cpp.compiler.428611593;cdt.managedbuild.tool.gnu.cpp.compiler.input.1339092954">
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.;cdt.managedbuild.tool.gnu.c.compiler.macosx.exe.debug.1355093079;cdt.managedbuild.tool.gnu.c.compiler.input.828831829">
             			
             <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
             		
         </scannerConfigBuildInfo>
         		
         <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.1559088384.1465078919;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.1559088384.1465078919.;cdt.managedbuild.tool.gnu.cross.c.compiler.2117521118;cdt.managedbuild.tool.gnu.c.compiler.input.747068146">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.;cdt.managedbuild.tool.gnu.cpp.compiler.macosx.exe.debug.985209703;cdt.managedbuild.tool.gnu.cpp.compiler.input.426053367">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.;cdt.managedbuild.tool.gnu.cross.c.compiler.1506642277;cdt.managedbuild.tool.gnu.c.compiler.input.1082146874">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.11946682;cdt.managedbuild.config.gnu.macosx.exe.debug.1485554328.11946682.;cdt.managedbuild.tool.gnu.cross.c.compiler.2101108127;cdt.managedbuild.tool.gnu.c.compiler.input.890880386">
             			
             <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
             		
