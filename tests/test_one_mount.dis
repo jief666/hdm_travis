@@ -1,0 +1,12 @@
+#!/bin/bash
+SCRIPT_ABS_FILENAME=`LC_ALL=en_US.ISO8859-1 perl -e 'use Cwd "abs_path";print abs_path(shift)' "${BASH_SOURCE[0]}"`
+SCRIPT_DIR=`dirname "$SCRIPT_ABS_FILENAME"`
+
+#set -x
+
+cd "$SCRIPT_DIR"
+
+path=$1
+
+echo -n "foo" | hdiutil attach -mountpoint mnt_hdiutil -readonly -owners on "$path" -stdinpass >/dev/null
+exit $?

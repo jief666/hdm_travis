@@ -1,5 +1,8 @@
 sudo: false
 language: cpp
+matrix:
+  include:                                              
+    - {osx_image: xcode8.3, env: 'DST="arch=x86_64"'}
 compiler:
   - gcc
 #  - clang
@@ -19,7 +22,6 @@ install:
 before_script: cd buildTravis
 script:
   - pwd
-  - gcc -v
-  - which g++-6 
+  - set
   - make all
-  
+  - cd $HOME

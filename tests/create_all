@@ -1,0 +1,175 @@
+#!/bin/bash
+SCRIPT_ABS_FILENAME=`LC_ALL=en_US.ISO8859-1 perl -e 'use Cwd "abs_path";print abs_path(shift)' "${BASH_SOURCE[0]}"`
+SCRIPT_DIR=`dirname "$SCRIPT_ABS_FILENAME"`
+
+cd "$SCRIPT_DIR"
+
+
+function do_rsync
+{
+        local name=$1
+        local extension=$2
+
+        echo name=$name
+        echo extension=$extension
+
+        diskutil eject /Volumes/$name >/dev/null 2>&1 # just in case
+
+        echo -n "foo" | hdiutil attach -owners on Images/$name.${extension} -stdinpass
+        hdiutil_ret=$?
+        if [ $hdiutil_ret -eq 0 ]
+        then
+            diskids=( $(echo -n "foo" | hdiutil attach -owners on Images/$name.${extension} -stdinpass  | awk '{if ($1) print $1}') )
+
+            sudo ditto --preserveHFSCompression /Volumes/ImgReference/ /Volumes/$name/ # ditto first to preserve HfsCompression
+            sudo local_rsync_2x /Volumes/ImgReference/ /Volumes/$name/ -c
+            sudo rm -rf /Volumes/$name/.fseventsd
+            for (( idx=${#diskids[@]}-1 ; idx>=0 ; idx-- ))
+            do
+                diskutil list | grep "${diskids[idx]}" >/dev/null 2>&1
+                rc=$?
+                if [[ $rc = 0 ]]
+                then
+                    diskutil eject "${diskids[idx]}"
+                fi
+            done
+        fi
+}  
+
+function create_image
+{
+        local name=$1
+        local type=$2
+        local size=$3
+        local fs=$4
+        local layout=$5
+        local encryption=$6
+        shift; shift; shift; shift; shift;
+
+
+        if [[ $type == SPARSEBUNDLE ]]; then
+                local extension=sparsebundle
+                local type_args=( -type $type )
+                local do_rsync="yes"
+        elif  [[ $type == UDIF ]]; then
+                local extension=dmg
+                local type_args=( -type $type )
+                local do_rsync="yes"
+        elif  [[ $type == SPARSE ]]; then
+                local extension=sparseimage
+                local type_args=( -type $type )
+                local do_rsync="yes"
+        else
+            local extension=dmg
+            local type_args=( -srcfolder /Volumes/ImgReference -format $type )
+            local do_rsync="no"
+            if [[ $type == UDTO ]]; then
+                local extension=cdr
+            elif [[ $type == RdWrx ]]; then
+                local extension=img
+            elif [[ $type == Rdxx ]]; then
+                local extension=img
+            elif [[ $type == Rken ]]; then
+                local extension=img
+            fi
+        fi
+
+        if ! [[ $encryption == NONE ]]; then
+                local encryption_args=( -encryption "$encryption" -stdinpass )
+        fi
+
+        if [ -f Images/$name.${extension} ] || [ -d Images/$name.${extension} ]
+        then
+            return
+        fi
+        #rm -rf Images/$name.${extension}
+
+        cmdArgs=()
+        cmdArgs=( hdiutil create Images/$name  -volname $name  "${type_args[@]}"  -size $size  -fs $fs  -layout "$layout"  "${encryption_args[@]}" )
+
+        echo "${cmdArgs[@]}"
+        echo -n "foo" | sudo "${cmdArgs[@]}"
+
+        sudo chown -R `id -u`:`id -g` Images/$name.${extension}
+
+        if [ $? -eq 0 ] && ! [ -z $do_rsync ]; then
+                do_rsync $name ${extension}
+        fi
+
+        chmod -R a-w Images/$name.${extension}
+
+#read -p "Press enter to continue"
+
+}
+
+function create_plain_and_encrypted
+{
+        local name=$1
+        local type=$2
+        local size=$3
+        local fs=$4
+        local layout=$5
+        shift; shift; shift; shift; shift;
+
+        create_image $name $type $size $fs $layout NONE
+        create_image ${name}Aes128 $type $size $fs $layout AES-128
+        create_image ${name}Aes256 $type $size $fs $layout AES-256
+}
+
+function create_all_layout
+{
+        local name=$1
+        local type=$2
+        local size=$3
+        local fs=$4
+        shift; shift; shift; shift;
+
+#        create_plain_and_encrypted ${name}NoMap     $type $size $fs NONE
+#        create_plain_and_encrypted ${name}AppleMap  $type $size $fs SPUD
+#        create_plain_and_encrypted ${name}Mbr       $type $size $fs MBRSPUD
+        create_plain_and_encrypted ${name}Gpt       $type $size $fs GPTSPUD
+}
+
+
+function create_hfs_and_apfs
+{
+        local name=$1
+        local type=$2
+        shift; shift;
+
+        create_all_layout ${name}Hfs $type 1m HFS+
+        create_all_layout ${name}Apfs $type 2m APFS
+}
+
+
+function create_all_type_and_format
+{
+        create_hfs_and_apfs Udif UDIF
+        create_hfs_and_apfs Sp SPARSE
+        create_hfs_and_apfs Sb SPARSEBUNDLE
+        create_hfs_and_apfs Udro UDRO
+        create_hfs_and_apfs Udco UDCO
+        create_hfs_and_apfs Udzo UDZO
+        create_hfs_and_apfs Udbz UDBZ
+        create_hfs_and_apfs Ulfo ULFO
+        create_hfs_and_apfs Ufbi UFBI
+        create_hfs_and_apfs Ipod IPOD
+        create_hfs_and_apfs Udrw UDRW
+        create_hfs_and_apfs Udto UDTO
+#        create_hfs_and_apfs Dc42 DC42 # diskutil failed
+#        create_hfs_and_apfs RdWr RdWr # legacy, can't be mounted on high sierra -> hdiutil: attach failed - legacy image should be converted
+#        create_hfs_and_apfs Rdxx Rdxx # legacy, can't be mounted on high sierra -> hdiutil: attach failed - legacy image should be converted
+#        create_hfs_and_apfs ROCo ROCo # legacy, can't be mounted on high sierra -> hdiutil: attach failed - legacy image should be converted
+#        create_hfs_and_apfs Rken Rken # legacy, can't be mounted on high sierra -> hdiutil: attach failed - legacy image should be converted
+}
+
+mkdir -p Images
+hdiutil attach -readonly -owners on _ImgReference.dmg
+
+#create_plain_and_encrypted ImgToto 1m HFS+ NONE
+#create_all_layout ImgToto 1m HFS+
+#create_hfs_and_apfs ImgToto
+create_all_type_and_format
+
+#do_rsync ImgNoMapHfs
+#do_rsync ImgNoMapHfsEnc
