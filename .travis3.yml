@@ -1,9 +1,11 @@
 sudo: false
-os: osx
 language: cpp
 matrix:
   include:                                              
     - {osx_image: xcode8.3, env: 'DST="arch=x86_64"'}
+compiler:
+  - gcc
+#  - clang
 addons:
   apt:
     sources:
@@ -15,16 +17,11 @@ addons:
        - libattr1-dev
        - openssl
        - libssl-dev
-before_install:
-  - brew install openssl
-  - brew install osxfuse
 install:
   - export PATH=../.settings/jief_build_scripts:$PATH
-#before_script: cd buildTravis
+before_script: cd buildTravis
 script:
   - pwd
   - set
-  - cd buildTravis
   - make all
   - cd ../tests
-  - ./test_all
