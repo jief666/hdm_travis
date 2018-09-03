@@ -16,8 +16,10 @@ addons:
        - openssl
        - libssl-dev
 before_install:
+  - export HOMEBREW_NO_AUTO_UPDATE=1
   - brew install openssl
-  - brew install osxfuse
+  - brew tap homebrew/cask
+  - brew cask install osxfuse
 install:
   - export PATH=../.settings/jief_build_scripts:$PATH
 #before_script: cd buildTravis
